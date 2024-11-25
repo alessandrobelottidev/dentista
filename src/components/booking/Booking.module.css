@@ -1,0 +1,31 @@
+.overlayBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  background: radial-gradient(
+      71.65% 71.65% at 50% 50%,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.2125) 47.5%,
+      rgba(0, 0, 0, 0.302857) 71.5%,
+      rgba(0, 0, 0, 0.389323) 90.5%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 71, 86, 0.85), rgba(0, 71, 86, 0.85));
+}
+
+.cardBg {
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  /* Note: backdrop-filter has minimal browser support */
+  backdrop-filter: blur(6px);
+}
+
+.cardBg button[type="submit"] {
+  color: var(--figma-text);
+}
