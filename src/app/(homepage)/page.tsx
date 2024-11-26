@@ -5,7 +5,7 @@ import { Services } from "@src/components/service-section";
 import { Booking } from "@src/components/booking";
 import { Footer } from "@src/components/Footer";
 import { HeroNavbar } from "@src/components/HeroNavbar";
-import { useRef } from "react";
+import { HomeProvider } from "./HomeProvider";
 
 export const metadata: Metadata = {
   title: "No al turismo dentale!",
@@ -14,21 +14,21 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const formRef = useRef(null);
-
   return (
     <>
-      <HeroNavbar />
+      <HomeProvider>
+        <HeroNavbar />
 
-      <Studio />
+        <Studio />
 
-      <VerticalExplainers />
+        <VerticalExplainers />
 
-      <Services />
+        <Services />
 
-      <Booking />
+        <Booking />
 
-      <Footer />
+        <Footer />
+      </HomeProvider>
     </>
   );
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { cardData } from "./card.interface";
 import { useScrollAnimation } from "@src/hooks/useScrollAnimation";
 import { Button } from "../ui/button";
-import { useHomeContext } from "@src/app/(homepage)/HomeContext";
+import { useHomeContext } from "@src/hooks/useHomeContext";
 
 export const Card = ({
   cardData,

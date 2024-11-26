@@ -5,7 +5,7 @@ import SbiancamentoPoster from "../../../public/videos/hls/vertical-explainers/s
 import PauraDentistaPoster from "../../../public/videos/hls/vertical-explainers/paura-del-dentista/paura-del-dentista.jpg";
 import { Button } from "../ui/button";
 import { useScrollAnimation } from "@src/hooks/useScrollAnimation";
-import { useHomeContext } from "@src/app/(homepage)/HomeContext";
+import { useHomeContext } from "@src/hooks/useHomeContext";
 
 export const VerticalExplainers = () => {
   const { elementRef: dentistFearRef, isVisible: isDentistFearVisible } =

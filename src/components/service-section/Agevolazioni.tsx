@@ -4,7 +4,7 @@ import Image from "next/image";
 import CofidisLogo from "../../../public/logos/cofidisLogo.svg";
 import CompassLogo from "../../../public/logos/compassLogo.svg";
 import { Button } from "../ui/button";
-import { useHomeContext } from "@src/app/(homepage)/HomeContext";
+import { useHomeContext } from "@src/hooks/useHomeContext";
 
 export const Agevolazioni = () => {
   const { elementRef, isVisible } = useScrollAnimation();
