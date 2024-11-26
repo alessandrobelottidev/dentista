@@ -1,12 +1,14 @@
 "use client";
-import { useScrollAnimation } from "@src/lib/useScrollAnimation";
+import { useScrollAnimation } from "@src/hooks/useScrollAnimation";
 import Image from "next/image";
 import CofidisLogo from "../../../public/logos/cofidisLogo.svg";
 import CompassLogo from "../../../public/logos/compassLogo.svg";
 import { Button } from "../ui/button";
+import { useHomeContext } from "@src/app/(homepage)/HomeContext";
 
 export const Agevolazioni = () => {
   const { elementRef, isVisible } = useScrollAnimation();
+  const { refs: _, scrollToSection } = useHomeContext();
 
   return (
     <div
@@ -30,7 +32,11 @@ export const Agevolazioni = () => {
           className="size-1/2 max-w-28"
         />
       </div>
-      <Button variant={"default"} size={"figmaFull"}>
+      <Button
+        variant={"default"}
+        size={"figmaFull"}
+        onClick={() => scrollToSection("form")}
+      >
         Richiedi appuntamento
       </Button>
     </div>

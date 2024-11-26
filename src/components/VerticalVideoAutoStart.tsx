@@ -6,7 +6,7 @@ import "video.js/dist/video-js.css";
 import { Volume2, VolumeX } from "lucide-react";
 
 interface HLSPlayerProps {
-  videoFile: string;
+  masterM3U8FilePath: string;
   posterFile: string;
   autoPlay?: boolean;
   controls?: boolean;
@@ -15,7 +15,7 @@ interface HLSPlayerProps {
 }
 
 const VerticalVideoAutoStart: React.FC<HLSPlayerProps> = ({
-  videoFile,
+  masterM3U8FilePath,
   posterFile,
   autoPlay = true,
   muted = true,
@@ -41,8 +41,8 @@ const VerticalVideoAutoStart: React.FC<HLSPlayerProps> = ({
     });
 
     player.src({
-      src: videoFile,
-      type: "video/mp4",
+      src: masterM3U8FilePath,
+      type: "application/x-mpegURL",
     });
 
     playerRef.current = player;
@@ -52,7 +52,7 @@ const VerticalVideoAutoStart: React.FC<HLSPlayerProps> = ({
         playerRef.current.dispose();
       }
     };
-  }, [autoPlay, loop, muted, posterFile, videoFile]);
+  }, [autoPlay, loop, muted, posterFile, masterM3U8FilePath]);
 
   const handleMuteClick = () => {
     if (playerRef.current) {

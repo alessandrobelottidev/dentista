@@ -1,10 +1,11 @@
 "use client";
 import { Section } from "../section";
 import VerticalVideo from "../VerticalVideo";
-import SbiancamentoPoster from "../../../public/sbiancamento-poster.jpg";
-import PauraDentistaPoster from "../../../public/paura-del-dentista.jpg";
+import SbiancamentoPoster from "../../../public/videos/hls/vertical-explainers/sbiancamento/sbiancamento-poster.jpg";
+import PauraDentistaPoster from "../../../public/videos/hls/vertical-explainers/paura-del-dentista/paura-del-dentista.jpg";
 import { Button } from "../ui/button";
-import { useScrollAnimation } from "@src/lib/useScrollAnimation";
+import { useScrollAnimation } from "@src/hooks/useScrollAnimation";
+import { useHomeContext } from "@src/app/(homepage)/HomeContext";
 
 export const VerticalExplainers = () => {
   const { elementRef: dentistFearRef, isVisible: isDentistFearVisible } =
@@ -12,12 +13,14 @@ export const VerticalExplainers = () => {
   const { elementRef: cleaningRef, isVisible: isCleaningVisible } =
     useScrollAnimation();
 
+  const { refs: _, scrollToSection } = useHomeContext();
+
   return (
     <Section>
       <div className="col-span-12 md:col-span-6 pb-14">
         <div className="md:pr-14 mb-10 md:mb-44" id="sbiancamento">
           <VerticalVideo
-            videoFile={"/sbiancamento.mp4"}
+            masterM3U8FilePath="/videos/hls/vertical-explainers/sbiancamento/master.m3u8"
             posterFile={SbiancamentoPoster}
           />
         </div>
@@ -38,7 +41,11 @@ export const VerticalExplainers = () => {
             rutrum, ipsum nec vestibulum facilisis, nunc leo blandit dui, eu
             cursus dui enim eu mauris
           </p>
-          <Button variant={"default"} size={"figmaWide"}>
+          <Button
+            variant={"default"}
+            size={"figmaWide"}
+            onClick={() => scrollToSection("form")}
+          >
             Richiedi appuntamento
           </Button>
 
@@ -68,7 +75,11 @@ export const VerticalExplainers = () => {
             rutrum, ipsum nec vestibulum facilisis, nunc leo blandit dui, eu
             cursus dui enim eu mauris
           </p>
-          <Button variant={"acquaMarina"} size={"figmaWide"}>
+          <Button
+            variant={"acquaMarina"}
+            size={"figmaWide"}
+            onClick={() => scrollToSection("form")}
+          >
             Richiedi appuntamento
           </Button>
 
@@ -82,7 +93,7 @@ export const VerticalExplainers = () => {
 
         <div className="md:pl-14 mb-10 md:mt-44" id="paura">
           <VerticalVideo
-            videoFile={"/paura-dentista.mp4"}
+            masterM3U8FilePath="/videos/hls/vertical-explainers/paura-del-dentista/master.m3u8"
             posterFile={PauraDentistaPoster}
           />
         </div>

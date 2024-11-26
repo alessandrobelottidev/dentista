@@ -11,12 +11,9 @@ const Navbar = ({ heroHeight }: { heroHeight: number }) => {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
-    console.log(heroHeight);
-
     const handleScroll = () => {
       const offset = window.scrollY;
       setIsSticky(offset > heroHeight);
-      console.log(heroHeight);
     };
     // window.innerHeight - 60
 

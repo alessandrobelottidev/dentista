@@ -1,10 +1,10 @@
 import { BadgeCheck, Eye, MapPin } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-} from "@src/components/ui/dialog";
+// import {
+//   Dialog,
+//   DialogContent,
+//   DialogTrigger,
+// } from "@src/components/ui/dialog";
 
 import Img1 from "../../../public/the-studio/1.jpg";
 import Img2 from "../../../public/the-studio/2.jpg";
@@ -164,18 +164,18 @@ const GalleryImage = ({
 
       <div className="absolute top-0 left-0 w-full h-full duration-300 transition-all group-hover:bg-[#00c5a474]"></div>
 
-      <Dialog>
+      {/* <Dialog>
         <DialogTrigger className="hidden p-4 group-hover:block absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
           <Eye className="text-white" />
         </DialogTrigger>
         <DialogContent>
           <Image
-            className="w-auto"
+            className="h-full w-auto"
             src={src}
             alt={`Image of the gallery: ${alt}`}
           />
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </div>
   );
 };

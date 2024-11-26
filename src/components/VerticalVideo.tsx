@@ -7,7 +7,7 @@ import { Play } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 
 interface HLSPlayerProps {
-  videoFile: string;
+  masterM3U8FilePath: string;
   posterFile: StaticImageData;
   autoPlay?: boolean;
   controls?: boolean;
@@ -16,7 +16,7 @@ interface HLSPlayerProps {
 }
 
 const VerticalVideo: React.FC<HLSPlayerProps> = ({
-  videoFile,
+  masterM3U8FilePath,
   posterFile,
   autoPlay = false,
   muted = true,
@@ -41,8 +41,8 @@ const VerticalVideo: React.FC<HLSPlayerProps> = ({
     });
 
     player.src({
-      src: videoFile,
-      type: "video/mp4",
+      src: masterM3U8FilePath,
+      type: "application/x-mpegURL",
     });
 
     playerRef.current = player;
@@ -52,7 +52,7 @@ const VerticalVideo: React.FC<HLSPlayerProps> = ({
         playerRef.current.dispose();
       }
     };
-  }, [autoPlay, loop, muted, posterFile, videoFile]);
+  }, [autoPlay, loop, muted, posterFile, masterM3U8FilePath]);
 
   const handleStartClick = () => {
     if (playerRef.current) {

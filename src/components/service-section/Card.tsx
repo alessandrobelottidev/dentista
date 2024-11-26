@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import { cardData } from "./card.interface";
-import { useScrollAnimation } from "@src/lib/useScrollAnimation";
+import { useScrollAnimation } from "@src/hooks/useScrollAnimation";
 import { Button } from "../ui/button";
+import { useHomeContext } from "@src/app/(homepage)/HomeContext";
 
 export const Card = ({
   cardData,
@@ -12,6 +13,7 @@ export const Card = ({
   delay: number;
 }) => {
   const { elementRef, isVisible } = useScrollAnimation();
+  const { refs: _, scrollToSection } = useHomeContext();
 
   return (
     <div
@@ -40,7 +42,15 @@ export const Card = ({
               €{cardData.startingPrice.toLocaleString()}
             </span>
           </p>
-          <Button variant={"accent"} size={"figmaSmall"}>
+          <Button
+            variant={"accent"}
+            size={"figmaSmall"}
+            onClick={() => {
+              // Nothing statewise changes with this button
+              // setGlobalState((prev) => ({ ...prev }));
+              scrollToSection("form");
+            }}
+          >
             Prenota
           </Button>
         </div>

@@ -54,8 +54,8 @@ export const HeroNavbar = () => {
             <div className="col-span-12 md:col-span-6 lg:col-span-4">
               <div className="max-w-sm w-full mx-auto">
                 <VerticalVideoAutoStart
-                  videoFile="/ideatoreDelProgetto.mp4"
-                  posterFile="/ideatoreDelProgetto.jpg"
+                  masterM3U8FilePath="/videos/hls/ideatoreDelProgetto/master.m3u8"
+                  posterFile="/videos/hls/ideatoreDelProgetto/ideatoreDelProgetto.jpg"
                 />
               </div>
             </div>
