@@ -37,9 +37,10 @@ export const VerticalExplainers = () => {
             Paura del dentista?
           </h1>
           <p className="font-light md:text-lg text-base pb-6 md:pb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            rutrum, ipsum nec vestibulum facilisis, nunc leo blandit dui, eu
-            cursus dui enim eu mauris
+            Non lasciare che la paura ti fermi. Offriamo trattamenti
+            odontoiatrici con tecniche moderne e sedazioni leggere per rendere
+            ogni visita confortevole. Supera la tua ansia con il nostro
+            approccio delicato e sicuro.
           </p>
           <Button
             variant={"default"}
@@ -71,9 +72,9 @@ export const VerticalExplainers = () => {
             Devi sbiancare i denti?
           </h1>
           <p className="font-light md:text-lg text-base pb-6 md:pb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            rutrum, ipsum nec vestibulum facilisis, nunc leo blandit dui, eu
-            cursus dui enim eu mauris
+            Un sorriso bianco e luminoso è possibile con il nostro trattamento
+            di sbiancamento sicuro e rapido. Elimina le macchie dai denti con
+            una tecnica efficace e rispettosa della tua salute orale.
           </p>
           <Button
             variant={"acquaMarina"}

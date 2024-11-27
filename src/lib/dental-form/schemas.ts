@@ -4,7 +4,7 @@ export const dentalServiceOptions = [
   "Overdenture",
   "All on Four",
   "All on Six",
-  "Protesi mobile arcata completa",
+  "Protesi mobile arcata singola",
   "Implantologia un dente",
 ] as const;
 

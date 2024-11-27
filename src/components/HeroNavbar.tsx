@@ -64,7 +64,7 @@ export const HeroNavbar = () => {
                 className="text-3xl md:text-4xl lg:text-5xl font-semibold pb-4"
                 style={{ lineHeight: "1.25" }}
               >
-                Ricevi servizi dentali{" "}
+                Ricevi servizi odontoiatrici{" "}
                 <span className="text-figmaAccent underline underline-offset-4">
                   migliori
                 </span>
@@ -75,14 +75,14 @@ export const HeroNavbar = () => {
                 in Italia!
               </h1>
               <p className="font-light pb-10 text-base lg:text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                rutrum, ipsum nec vestibulum facilisis, nunc leo blandit dui, eu
-                cursus dui enim eu mauris.
-                <br />
-                <br />
-                Mauris tristique egestas urna sit amet rutrum. In vulputate
-                ipsum eget sapien bibendum suscipit. Nam ac sapien sit amet est
-                consectetur maximus.
+                Affidati a professionisti odontoiatrici italiani per un sorriso
+                sano e brillante senza dover cercare soluzioni all’estero.
+                Grazie a servizi all’avanguardia e costi competitivi, puoi
+                evitare il cosiddetto "turismo dentale" in paesi dell’Europa
+                dell’Est, garantendoti qualità e sicurezza vicino a casa.
+                <br /> <br /> Ricevere cure in Italia significa scegliere
+                eccellenza, trasparenza e il supporto di un sistema sanitario
+                con standard elevati.
               </p>
 
               <HeroForm />

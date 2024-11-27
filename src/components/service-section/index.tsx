@@ -42,9 +42,9 @@ export const Services = () => {
     {
       title: "Protesi mobile arcata completa",
       description: "Riabilitazione rimovibile per arcata.",
-      startingPrice: 690,
+      startingPrice: 850,
       image: Image5,
-      formServiceOption: "Protesi mobile arcata completa",
+      formServiceOption: "Protesi mobile arcata singola",
     },
   ];
 

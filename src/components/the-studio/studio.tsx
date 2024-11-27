@@ -23,9 +23,10 @@ export const Studio = () => {
             Lo studio
           </h1>
           <p className="font-light text-base md:text-lg pb-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            rutrum, ipsum nec vestibulum facilisis, nunc leo blandit dui, eu
-            cursus dui enim eu mauris.
+            Nel nostro studio, ci impegniamo a garantire un ambiente
+            professionale e accogliente. Con anni di esperienza nel settore
+            odontoiatrico, offriamo trattamenti personalizzati, mirati a
+            risolvere le tue necessità in modo sicuro ed efficace.
           </p>
 
           <p className="font-semibold text-base md:text-lg pb-2">
