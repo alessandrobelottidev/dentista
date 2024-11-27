@@ -78,8 +78,9 @@ export const HeroNavbar = () => {
                 Affidati a professionisti odontoiatrici italiani per un sorriso
                 sano e brillante senza dover cercare soluzioni all’estero.
                 Grazie a servizi all’avanguardia e costi competitivi, puoi
-                evitare il cosiddetto "turismo dentale" in paesi dell’Europa
-                dell’Est, garantendoti qualità e sicurezza vicino a casa.
+                evitare il cosiddetto &quot;turismo dentale&quot; in paesi
+                dell’Europa dell’Est, garantendoti qualità e sicurezza vicino a
+                casa.
                 <br /> <br /> Ricevere cure in Italia significa scegliere
                 eccellenza, trasparenza e il supporto di un sistema sanitario
                 con standard elevati.
