@@ -8,7 +8,7 @@ export async function sendBookingDetails(
   dentalHelpForm: DentalFormValues
 ): Promise<CreateEmailResponse> {
   const res = await resend.emails.send({
-    from: "noreply@noalturismodentale.it",
+    from: "onboarding@resend.dev",
     to: "noalturismodentale@libero.it",
     subject: "Nuova richiesta di appuntamento dal tuo sito web!",
     html: `
