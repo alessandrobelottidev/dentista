@@ -8,7 +8,10 @@ import {
   DentalFormValues,
 } from "@src/lib/dental-form/schemas";
 
-export const useDentalForm = (formType: "full" | "minimal" = "full") => {
+export const useDentalForm = (
+  formType: "full" | "minimal" = "full",
+  successCallback?: () => Promise<void>
+) => {
   const { globalState, setGlobalState } = useHomeContext();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -25,7 +28,7 @@ export const useDentalForm = (formType: "full" | "minimal" = "full") => {
 
   useEffect(() => {
     form.reset(globalState.dentalHelpForm);
-  }, [globalState.dentalHelpForm, form.reset]);
+  }, [globalState.dentalHelpForm]);
 
   const updateGlobalState = useCallback(
     (data: Partial<DentalFormValues>) => {
@@ -44,19 +47,19 @@ export const useDentalForm = (formType: "full" | "minimal" = "full") => {
     async (values: DentalFormValues) => {
       setIsSubmitting(true);
       try {
-        // Actual submission logic would go here
-        toast.success("Appuntamento richiesto con successo!");
-
+        if (successCallback) {
+          await successCallback();
+        }
         // Optional: Reset form or navigate
         form.reset();
       } catch (error) {
-        toast.error("Impossibile inviare il modulo. Riprova.");
+        toast.error("Impossibile inviare il modulo. Riprova piu tardi.");
         console.error(error);
       } finally {
         setIsSubmitting(false);
       }
     },
-    [form]
+    [form, successCallback]
   );
 
   return {

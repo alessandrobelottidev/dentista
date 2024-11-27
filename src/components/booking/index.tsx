@@ -21,10 +21,9 @@ export const Booking = () => {
         <Image
           src={BackgroundImage}
           alt={"Background image"}
-          className="z-0"
+          className="z-0 object-cover"
           placeholder="blur"
-          layout="fill"
-          objectFit="cover"
+          fill
         />
 
         {/* Overlay */}

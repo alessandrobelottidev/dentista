@@ -13,7 +13,7 @@ export const Card = ({
   delay: number;
 }) => {
   const { elementRef, isVisible } = useScrollAnimation();
-  const { refs: _, scrollToSection } = useHomeContext();
+  const { refs: _, scrollToSection, setGlobalState } = useHomeContext();
 
   return (
     <div
@@ -46,8 +46,13 @@ export const Card = ({
             variant={"accent"}
             size={"figmaSmall"}
             onClick={() => {
-              // Nothing statewise changes with this button
-              // setGlobalState((prev) => ({ ...prev }));
+              setGlobalState((prev) => ({
+                ...prev,
+                dentalHelpForm: {
+                  ...prev.dentalHelpForm,
+                  service: cardData.formServiceOption,
+                },
+              }));
               scrollToSection("form");
             }}
           >

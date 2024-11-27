@@ -34,7 +34,6 @@ export const HomeProvider = ({ children }: { children: React.ReactNode }) => {
       email: "",
       service: "Implantologia un dente",
       place: "Milano",
-      datetime: new Date(),
     },
   });
 

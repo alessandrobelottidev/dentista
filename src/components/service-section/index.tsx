@@ -15,6 +15,7 @@ export const Services = () => {
       description: "Riabilitazione di un singolo elemento dentale.",
       startingPrice: 899,
       image: Image1,
+      formServiceOption: "Implantologia un dente",
     },
     {
       title: "Overdenture",
@@ -22,24 +23,28 @@ export const Services = () => {
         "Riabilitazione semifissa su 2 impianti per arcata completa.",
       startingPrice: 2900,
       image: Image2,
+      formServiceOption: "Overdenture",
     },
     {
       title: "All on Four",
       description: "Riabilitazione fissa su 4 impianti per arcata completa.",
       startingPrice: 3999,
       image: Image3,
+      formServiceOption: "All on Four",
     },
     {
       title: "All on Six",
       description: "Riabilitazione fissa su 6 impianti per arcata completa.",
       startingPrice: 4499,
       image: Image4,
+      formServiceOption: "All on Six",
     },
     {
       title: "Protesi mobile arcata completa",
       description: "Riabilitazione rimovibile per arcata.",
       startingPrice: 690,
       image: Image5,
+      formServiceOption: "Protesi mobile arcata completa",
     },
   ];
 

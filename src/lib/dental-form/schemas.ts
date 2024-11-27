@@ -20,7 +20,7 @@ export const dentalFormSchema = z.object({
   place: z.enum(locationOptions, {
     errorMap: () => ({ message: "Selezionare una location" }),
   }),
-  datetime: z.coerce.date(),
+  datetime: z.coerce.date().optional(),
 });
 
 export type DentalFormValues = z.infer<typeof dentalFormSchema>;
