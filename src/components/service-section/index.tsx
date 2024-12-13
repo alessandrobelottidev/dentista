@@ -28,14 +28,14 @@ export const Services = () => {
     {
       title: "All on Four",
       description: "Riabilitazione fissa su 4 impianti per arcata completa.",
-      startingPrice: 3999,
+      startingPrice: 4290,
       image: Image3,
       formServiceOption: "All on Four",
     },
     {
       title: "All on Six",
       description: "Riabilitazione fissa su 6 impianti per arcata completa.",
-      startingPrice: 4499,
+      startingPrice: 4990,
       image: Image4,
       formServiceOption: "All on Six",
     },
