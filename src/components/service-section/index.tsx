@@ -40,7 +40,7 @@ export const Services = () => {
       formServiceOption: "All on Six",
     },
     {
-      title: "Protesi mobile arcata completa",
+      title: "Protesi mobile arcata singola",
       description: "Riabilitazione rimovibile per arcata.",
       startingPrice: 850,
       image: Image5,
