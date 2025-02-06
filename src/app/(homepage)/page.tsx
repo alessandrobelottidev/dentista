@@ -19,11 +19,11 @@ export default function Home() {
       <HomeProvider>
         <HeroNavbar />
 
+        <Services />
+
         <Studio />
 
         <VerticalExplainers />
-
-        <Services />
 
         <Booking />
 
