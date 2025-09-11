@@ -4,7 +4,6 @@ import { Button } from "@src/components/ui/button";
 import { Form } from "@src/components/ui/form";
 import { DentalFormFields } from "@src/components/shared/dental-form/dental-form-fields";
 import { useDentalForm } from "@src/hooks/useDentalForm";
-import { sendBookingDetails } from "@src/app/actions";
 import { toast } from "sonner";
 import { useHomeContext } from "@src/hooks/useHomeContext";
 
@@ -14,10 +13,18 @@ export default function BookingForm() {
   const { form, updateGlobalState, handleSubmit, isSubmitting } = useDentalForm(
     "full",
     async () => {
-      const res = await sendBookingDetails(globalState.dentalHelpForm);
+      const response = await fetch('/api/send-booking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(globalState.dentalHelpForm),
+      });
 
-      if (res.error) {
-        throw new Error(res.error.message);
+      const res = await response.json();
+
+      if (!response.ok || res.error) {
+        throw new Error(res.error?.message || 'Failed to send booking');
       }
 
       toast.success("Appuntamento richiesto con successo!");
